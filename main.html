@@ -4,37 +4,76 @@
   <meta charset="UTF-8">
   <title>한양대학교 헬스장</title>
   <style>
-    header {
-      background-color: #0e4A84;
-      text-align: center;
-      color: yellow;    }
-    nav {
-      background-color: #898c8e80;
-      text-align: left;
-      color: black;
+    html, body{
+      width:1900px;
     }
-    footer {
-      background-color: #3f3d42;
-      height: 100px;
-      text-align: center;
-      clear: both;
+
+    #banner{
+      width:80px;
+      float:left;
+      padding:10px;
+    }
+    header h1{
+      display:inline-block;
+      text-align:left;
+    }
+
+    #map-section{
+      height:600px;
+      float:left;
+      display:inline;
+      width:30%;
+      text-align:center;
+      
+    }
+    #map-section img{
+      padding-top:80px;
+      width:500px;
+    }
+    #detail-section iframe{
+      width:55%;
+    }
+    #detail-section{
+      width:500px;
+      display:inline;
     }
   </style>
 </head>
+
+
+
+
+
+
+
 <body>
   <header>
-    <h1><em>한양대학교 헬스장 소개</em></h1>
+    <img id="banner" src="dumbel.jpg" alt="이미지">
+    <h1>HY Health</h1>
   </header>
   
-  <nav>
-    <h1>헬스장 위치</h1>
-    <h1>헬스장 가격 설명</h1>
-    <h1>헬스장 기구 비치 현황</h1>
-    <h1>헬스장 가격 소개</h1>
-    <h1>헬스장 운영시간</h1>
+
+  
+  
+  <section id="map-section">
+    <form action="">
+      <select name="gym">
+        <option value="fourseason">포시즌 휘트니스</option>
+        <option value="able">에이블 짐</option>
+        <option value="park">파크짐</option>
+        <option value="gunttam">건강과 땀</option>
+        <option value="olympic">올림픽 체육관</option>
+        <option value="dorm">2생활관</option>
+        <option value="city">시티짐</option>
+      </select>
+    </form>
+    <!--옵션 선택에 따라 지도 모양 바뀜-->
+    <img id="map" src="map.jpg" alt="지도">
+  </section>
+  <section id="detail-section">
     
-  </nav>
-  <p></p>
-  <footer>footer</footer>
+    <!--옵션 선택에 따라 아이프레임 내용바뀜-->
+    <iframe src="gym1" width="300px" height="500px">explaination of gym</iframe>
+  </section>
 </body>
 </html>
