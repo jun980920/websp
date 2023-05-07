@@ -3,41 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>한양대학교 헬스장</title>
-  <style>
-    html, body{
-      width:1900px;
-    }
-
-    #banner{
-      width:80px;
-      float:left;
-      padding:10px;
-    }
-    header h1{
-      display:inline-block;
-      text-align:left;
-    }
-
-    #map-section{
-      height:600px;
-      float:left;
-      display:inline;
-      width:30%;
-      text-align:center;
-      
-    }
-    #map-section img{
-      padding-top:80px;
-      width:500px;
-    }
-    #detail-section iframe{
-      width:55%;
-    }
-    #detail-section{
-      width:500px;
-      display:inline;
-    }
-  </style>
+  <link href="mainstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -47,33 +13,42 @@
 
 
 <body>
-  <header>
-    <img id="banner" src="dumbel.jpg" alt="이미지">
-    <h1>HY Health</h1>
-  </header>
-  
-
+  <nav class="division" id="left">
+  </nav>
   
   
-  <section id="map-section">
-    <form action="">
-      <select name="gym">
-        <option value="fourseason">포시즌 휘트니스</option>
-        <option value="able">에이블 짐</option>
-        <option value="park">파크짐</option>
-        <option value="gunttam">건강과 땀</option>
-        <option value="olympic">올림픽 체육관</option>
-        <option value="dorm">2생활관</option>
-        <option value="city">시티짐</option>
-      </select>
-    </form>
-    <!--옵션 선택에 따라 지도 모양 바뀜-->
-    <img id="map" src="map.jpg" alt="지도">
-  </section>
-  <section id="detail-section">
+  
+  <nav id="mainpart" class="division">
+    <header>
+      <h1>HY Health</h1>
+    </header>
     
-    <!--옵션 선택에 따라 아이프레임 내용바뀜-->
-    <iframe src="gym1" width="300px" height="500px">explaination of gym</iframe>
-  </section>
+
+      <form action="">
+        <select name="gym">
+          <option value="fourseason">포시즌 휘트니스</option>
+          <option value="able">에이블 짐</option>
+          <option value="park">파크짐</option>
+          <option value="gunttam">건강과 땀</option>
+          <option value="olympic">올림픽 체육관</option>
+          <option value="dorm">2생활관</option>
+          <option value="city">시티짐</option>
+        </select>
+      </form>
+    
+    <section id="map-section">
+      <!--옵션 선택에 따라 지도 모양 바뀜-->
+      <img id="map" src="map.jpg" alt="지도">
+    </section>
+    <section id="detail-section">
+      
+      <!--옵션 선택에 따라 아이프레임 내용바뀜-->
+      <iframe src="gym1" width="300px" height="500px">explaination of gym</iframe>
+    </section>
+  </nav>  
+  
+  
+  <nav id="right" class="division">
+  </nav>
 </body>
 </html>
