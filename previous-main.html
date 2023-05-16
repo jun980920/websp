@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>한양대학교 헬스장</title>
+  <style>
+    html, body{
+      width:1900px;
+    }
+
+    #banner{
+      width:80px;
+      float:left;
+      padding:10px;
+    }
+    header h1{
+      width:40%
+      display:block;
+      text-align:left;
+    }
+
+    #map-section{
+      height:600px;
+      float:left;
+      display:inline;
+      width:30%;
+      text-align:center;
+      
+    }
+    #map-section iframe{
+      padding-top: 30px;
+      width: 500px;
+      height: 500px;
+    }
+    
+    #detail-section iframe{
+      width:55%;
+    }
+    #detail-section{
+      width:500px;
+      display:inline;
+    }
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <img id="banner" src="dumbel.jpg" alt="이미지">
+    <h1>HY Health</h1>
+  </header>
+    
+  <section id="map-section">
+    <form action="">
+      <select id="gym">
+        <option value="none">선택</option>
+        <option name=fourseason value="https://snazzymaps.com/embed/488947">포시즌 휘트니스</option>
+        <option name=able value="https://snazzymaps.com/embed/488948">에이블 짐</option>
+        <option name=park value="https://snazzymaps.com/embed/488963">파크짐</option>
+        <option name=gunttam value="https://snazzymaps.com/embed/488965">건강과 땀</option>
+        <option name=olympic value="https://snazzymaps.com/embed/488966">올림픽 체육관</option>
+        <option name=dorm value="https://snazzymaps.com/embed/488967">2생활관</option>
+        <option name=city value="https://snazzymaps.com/embed/488970">시티짐</option>
+      </select>
+    </form>
+    <!--옵션 선택에 따라 지도 모양 바뀜-->
+    <iframe id="map"  width="500px" height="500px" style="border:none;"></iframe>
+    <script type="text/javascript">
+        function changeIframe() {
+            var get=document.getElementById("gym");
+            var dropDown=get.options[get.selectedIndex].value;
+            if (dropDown == "none") {
+                document.getElementById("map").src = "https://snazzymaps.com/embed/488820";
+            } else {
+                document.getElementById("map").src = dropDown;
+            }
+        }
+        document.getElementById("gym").onchange = changeIframe;
+    </script>
+
+  </section>
+  <section id="detail-section">
+    
+    <!--옵션 선택에 따라 아이프레임 내용바뀜-->
+    <iframe src="gym1" width="300px" height="500px">explaination of gym</iframe>
+  </section>
+</body>
+
+</html>

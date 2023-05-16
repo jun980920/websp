@@ -3,86 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>한양대학교 헬스장</title>
-  <style>
-    html, body{
-      width:1900px;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="mainstyle.css">
 
-    #banner{
-      width:80px;
-      float:left;
-      padding:10px;
-    }
-    header h1{
-      display:inline-block;
-      text-align:left;
-    }
-
-    #map-section{
-      height:600px;
-      float:left;
-      display:inline;
-      width:30%;
-      text-align:center;
-      
-    }
-    #map-section iframe{
-      padding-top: 30px;
-      width: 500px;
-      height: 500px;
-    }
-    
-    #detail-section iframe{
-      width:55%;
-    }
-    #detail-section{
-      width:500px;
-      display:inline;
-    }
-  </style>
 </head>
 
 
 <body>
   <header>
-    <img id="banner" src="dumbel.jpg" alt="이미지">
-    <h1>HY Health</h1>
+    <a href="main.html">
+      <img id="banner" src="imgs/dumbel.jpg" alt="이미지">
+      <h1 id="header_letter">한양대 헬스장</h1>
+    </a>
   </header>
-    
-  <section id="map-section">
-    <form action="">
-      <select id="gym">
-        <option value="none">선택</option>
-        <option name=fourseason value="https://snazzymaps.com/embed/488947">포시즌 휘트니스</option>
-        <option name=able value="https://snazzymaps.com/embed/488948">에이블 짐</option>
-        <option name=park value="https://snazzymaps.com/embed/488963">파크짐</option>
-        <option name=gunttam value="https://snazzymaps.com/embed/488965">건강과 땀</option>
-        <option name=olympic value="https://snazzymaps.com/embed/488966">올림픽 체육관</option>
-        <option name=dorm value="https://snazzymaps.com/embed/488967">2생활관</option>
-        <option name=city value="https://snazzymaps.com/embed/488970">시티짐</option>
-      </select>
-    </form>
-    <!--옵션 선택에 따라 지도 모양 바뀜-->
-    <iframe id="map" src="https://snazzymaps.com/embed/488820" width="500px" height="500px" style="border:none;"></iframe>
-    <script type="text/javascript">
-        function changeIframe() {
-            var get=document.getElementById("gym");
-            var dropDown=get.options[get.selectedIndex].value;
-            if (dropDown == "none") {
-                document.getElementById("map").src = "https://snazzymaps.com/embed/488820";
-            } else {
-                document.getElementById("map").src = dropDown;
-            }
-        }
-        document.getElementById("gym").onchange = changeIframe;
-    </script>
 
-  </section>
-  <section id="detail-section">
-    
-    <!--옵션 선택에 따라 아이프레임 내용바뀜-->
-    <iframe src="gym1" width="300px" height="500px">explaination of gym</iframe>
-  </section>
+  <nav id="sidebar">
+    <ul id="listofgym">
+      <li><a href="2생활관.html">2생활관</a></li>
+      <li><a href="건강과 땀.html">건강과 땀</a></li>
+      <li><a href="올림픽 체육관.html">올림픽 체육관</a></li>
+      <li><a href="파크짐.html">파크짐</a></li>
+      <li><a href="포시즌 휘트니스.html">포시즌 휘트니스</a></li>
+      <li><a href="에이블 짐.html">에이블짐</a></li>
+    </ul>
+  </nav>
+
 </body>
 
 </html>
