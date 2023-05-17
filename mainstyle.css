@@ -33,21 +33,21 @@
       font-size:25px;
       text-align: center;
       margin-left:-40px;
+      margin-right:40px;
       text-decoration:underline #5a5757 solid 1px;
       text-underline-offset: 5px;
     }
-
     #sidebar{
       display:inline-block;
       width:700px;
+      vertical-align: top;
     }
 
     span{
       width:auto;
-      height:770px;
+      height:850px;
       background-color:#363535;
       display:inline-block;
-      border:1px solid black;
       flex:1;
     }
     #main_content{
@@ -55,4 +55,24 @@
     }
     #left, #right{
       width:auto;
+    }
+    .letters {
+      text-align: center;
+      font-size: 40px;
+      animation-name: fade-in;
+      animation-duration: 1.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
