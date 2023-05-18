@@ -1,19 +1,26 @@
 
 #section1 {
     display: block;
-    width: 55%;
+    width: 50%;
     margin-right: 1%;
     float: left; 
 }
 #section1 img {
+    margin-top:10px;
     padding: 10px;
     width: 100%;
-    max-width: 300px;
     min-width: 200px;
+}
+@media screen and (min-width:800px) {
+    #section1 img:nth-of-type(4)
+    {
+        display:none;
+    }
 }
 #section2 {
     display: block;
-    width:100%
+    width:80%;
+    max-width:800px;
 }
 
 article{padding:20px}
@@ -54,4 +61,7 @@ summary{
 details{
     padding:20px;
     border:1px solid black;
+}
+html{
+    background-color: ;
 }
