@@ -1,5 +1,6 @@
 
 #section1 {
+    margin-left:20px;
     border:1px solid black;
     display: block;
     width: 50%;
@@ -8,6 +9,7 @@
     margin-top:20px;
     text-align:center;
     position:relative;
+    height:100%;
 }
 #picture{
     position:absolute;
@@ -27,18 +29,12 @@
     width: 90%;
     min-width: 200px;
 }
-@media screen and (min-width:800px) {
-    #section1 img:nth-of-type(4)
-    {
-        display:none;
-    }
-}
+
 #section2 {
     display: block;
-    width:80%;
+    width:60%;
     max-width:800px;
 }
-
 article{padding:20px}
 p,ul{background-color: white; padding: 20px;}
 #return {
@@ -78,3 +74,11 @@ details{
     padding:20px;
     border:1px solid black;
 }
+
+@media screen and (min-width:800px) {
+    #section1 img:nth-of-type(4)
+    {
+        display:none;
+    }
+}
+
