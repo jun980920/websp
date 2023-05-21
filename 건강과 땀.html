@@ -3,61 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <title>건강과 땀</title>
-  <link type="text/css" rel="stylesheet" href="style.css">
-  <style>
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="mainstyle.css">
+  <link type="text/css" rel="stylesheet" href="style copy.css">
+
 </head>
 
 <body>
-    <header><h1>건강과 땀</h1></header>
-    <nav>
-      <img src="imgs/healthsweat1.jpg" alt="건강과땀 매장사진1" width="100%">
-      <img src="imgs/healthsweat2.jpg" alt="건강과땀 매장사진2" width="100%">
-      <img src="imgs/healthsweat3.jpg" alt="건강과땀 매장사진3" width="100%">
-      <img src="imgs/healthsweat4.jpg" alt="건강과땀 매장사진4" width="100%">
-      <img src="imgs/healthsweat5.jpg" alt="건강과땀 매장사진5" width="100%">
-      <img src="imgs/healthsweat6.jpg" alt="건강과땀 매장사진6" width="100%">
-    </nav>
-    <section>
-      <article>
-        <h2>특징</h2>
-        <ul>
-          <li>
-            학교 안에 있어 접근성이 좋아 짧은 공강 시간에도 다녀올 수 있다.
-          </li>
-          <li>
-            평일 오후 3시에서 8시 정도의 시간에는 사람이 많아 원하는 기구를 사용하는데에 제약이 있을 수 있다.
-          </li>
-          <li>
-            한양대 재학생 할인이 있다.
-          </li>
-          <li>
-            샤워실에 파티션이 없다.
-          </li>
-          <li>
-            한양대에 유학생으로 온 다양한 인종의 외국인들도 많이 이용한다.
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h2>시설</h2>
-        <p>파워랙 4개, 런닝머신 20여개, 랫풀다운, 시티드로우, 체스트프레스, 숄더프레스, 
-          암컬, 어시스트풀업, 레그프레스, 레그익스텐션, 레그컬, 다수의 덤벨 바벨 및 넓은 프리웨이트존 등
-        </p>
-      </article>
-      <article>
-        <h2>가격</h2>
-        <img id="healthsweat_price" src="imgs/healthsweat_price.jpg" alt="건강과땀 가격표" width="100%">
-      </article>
-      <article>
-        <h2>접근성</h2>
-        <p>
-          올림픽 체육관 웨이트 트레이닝실과 함께 학교 안에 있는 두 개의 헬스장 중 하나이다. 
-          특히 학생회관 5층에 위치하여 학교 정문 및 한양대역에서 오가기 좋다.
-          또한 바로 앞 사회과학관의 엘리베이터를 이용하면 언덕길을 통하지 않고 중앙도서관 등지에서
-          쉽게 오갈 수 있다.
-        </p>
-      </article>
-    </section>
+  <header>
+    <a href="main.html">
+      <img id="banner" src="imgs/dumbel.jpg" alt="이미지">
+      <div id="return">return!</div>
+    </a>
+    <h1>건강과 땀</h1>
+  </header>
+    <div id="main_content">
+        <section id="section1">
+          <div id="picture">Picture</div>
+          <img src="imgs/healthsweat1.jpg" alt="건강과땀 헬스장사진1" width="100%">
+          <img src="imgs/healthsweat2.jpg" alt="건강과땀 헬스장사진2" width="100%">
+          <img src="imgs/healthsweat3.jpg" alt="건강과땀 헬스장사진3" width="100%">
+          <img src="imgs/healthsweat4.jpg" alt="건강과땀 헬스장사진4" width="100%">
+        </section>       
+        <section id="section2">
+          <article>
+            <details>
+              <summary>특징</summary>
+              <ul>
+                <li>
+                학교 안에 있어 접근성이 좋아 짧은 공강 시간에도 다녀올 수 있다.
+                </li>
+                <li>
+                  평일 오후 3시에서 8시 정도의 시간에는 사람이 많아 원하는 기구를 사용하는데에 제약이 있을 수 있다.
+                </li>
+                <li>
+                  한양대 재학생 할인이 있다.
+                </li>
+                <li>
+                  샤워실에 파티션이 없다.
+                </li>
+                <li>
+                  한양대에 유학생으로 온 다양한 인종의 외국인들도 많이 이용한다.
+                </li>
+              </ul>
+            </details>
+          </article>
+          <article>
+            <details>
+              <summary>시설</summary>
+              <p>파워랙 4개, 런닝머신 20여개, 랫풀다운, 시티드로우, 체스트프레스, 숄더프레스, 
+                암컬, 어시스트풀업, 레그프레스, 레그익스텐션, 레그컬, 다수의 덤벨 바벨 및 넓은 프리웨이트존
+              </p>
+            </details>
+          </article>
+          <article>
+            <details>
+              <summary>가격</summary> 
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th rowspan="2">기간</th><th colspan="2">헬스 이용권</th><th rowspan="2">운동복(수건포함)</th><th rowspan="2">수건</th><th rowspan="2">개인락카</th>
+                  </tr>
+                  <tr>
+                    <th>학생</th><th>직원/졸업생</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>12개월</td><td>300,000</td><td>360,000</td><td>120,000</td><td>60,000</td><td>60,000</td>
+                </tr>
+                <tr>
+                  <td>6개월</td><td>180,000</td><td>210,000</td><td>60,000</td><td>30,000</td><td>30,000</td>
+                </tr>
+                <tr>
+                  <td>4개월</td><td>140,000</td><td>160,000</td><td>40,000</td><td>20,000</td><td>20,000</td>
+                </tr>
+                <tr>
+                  <td>3개월</td><td>120,000</td><td>135,000</td><td>30,000</td><td>15,000</td><td>15,000</td>
+                </tr>
+                <tr>
+                  <td>2개월</td><td>90,000</td><td>100,000</td><td>20,000</td><td>10,000</td><td>10,000</td>
+                </tr>
+                <tr>
+                  <td>1개월</td><td>50,000</td><td>55,000</td><td>10,000</td><td>5,000</td><td>X</td>
+                </tr>
+              </table>
+              
+            </details>
+          </article>
+          <article>
+            <details>
+              <summary>접근성</summary>
+              <p>
+                학생회관 5층에 위치하여 학교 정문 및 한양대역에서 오가기 좋다.
+                또한 바로 앞 사회과학관의 엘리베이터를 이용하면 언덕길을 통하지 않고 중앙도서관 등지에서
+                쉽게 오갈 수 있다.
+            </p>
+          </details>
+        </article>
+      </section>
+    </div>
+
 </body>
 </html>
