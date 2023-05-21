@@ -74,6 +74,16 @@ details{
     padding:20px;
     border:1px solid black;
 }
+table{
+    text-align:center;
+    border-collapse:collapse;
+    width: 100%;
+}
+thead{
+    color: white;
+    background-color: #5a5757ea;
+    border-color:white;
+}
 
 @media screen and (min-width:800px) {
     #section1 img:nth-of-type(4)
@@ -81,4 +91,3 @@ details{
         display:none;
     }
 }
-
