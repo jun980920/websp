@@ -16,6 +16,8 @@
     header{
       height:100px;
       text-align:center;
+      font-size:20px;
+      padding-bottom:15px;
     }
 
     header h1{
@@ -38,6 +40,10 @@
       text-decoration:underline #5a5757 solid 1px;
       text-underline-offset: 5px;
     }
+    #listofgym li:hover{
+      font-size:33px;
+      text-decoration: underline black solid 1px;
+    }
     #sidebar{
       display:inline-block;
       width:700px;
@@ -45,7 +51,7 @@
     }
     span{
       width:auto;
-      height:830px;
+      height:832px;
       background-color:#363535;
       display:inline-block;
       flex:1;
@@ -63,8 +69,8 @@
       animation-duration: 1s;
       animation-fill-mode: forwards;
       margin:0px;
-      padding-top:5px;
-      padding-bottom:10px;
+      padding-top:3px;
+      padding-bottom:4px;
     }
     
     @keyframes fade-in {
@@ -82,4 +88,8 @@
 
     body{
       margin:1px;
+    }
+    b{
+      color:darkgreen;
+      font-size:35px;
     }
