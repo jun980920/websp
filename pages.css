@@ -47,9 +47,9 @@ p,ul{background-color: white; padding: 20px;}
     list-style-type: decimal;
 }
 #banner{
-    width:100px;
+    width:70px;
     float:left;
-    padding:20px;
+    margin-left:24px;
 }
 header{
     height:100px;
