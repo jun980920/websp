@@ -39,8 +39,8 @@ article{padding:20px}
 p,ul{background-color: white; padding: 20px;}
 #return {
     position: absolute;
-    top: 80px; 
-    left: 44px;
+    top: 100px; 
+    left: 60px;
     width: fit-content;
 }
 #section2 li{
@@ -49,13 +49,16 @@ p,ul{background-color: white; padding: 20px;}
 #banner{
     width:100px;
     float:left;
-    padding:10px;
+    padding:20px;
 }
 header{
     height:100px;
     border: 2px solid black;
     text-align:center;
     display:relative;
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px;
 }
 
 header h1{
@@ -69,6 +72,9 @@ header h1{
 }
 summary{
     font-size:20px;
+}
+summary:hover{
+    cursor:pointer;
 }
 details{
     padding:20px;
@@ -93,7 +99,7 @@ thead{
 }
 #map{
     position:absolute;
-    top:20px;
-    right:20px;
+    top:40px;
+    right:50px;
     
 }
