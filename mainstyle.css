@@ -93,3 +93,16 @@
       color:darkgreen;
       font-size:35px;
     }
+
+    #body{
+      position:absolute;
+      right:10px;
+      padding:30px;
+    }
+    #body_text{
+      position:absolute;
+      right:30px;
+      top:70px;
+      font-size:16px;
+      font-style:bold;
+    }
