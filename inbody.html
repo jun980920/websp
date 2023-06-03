@@ -6,6 +6,47 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="inbody.css">
+<script>
+  function calculateBMI() {
+    var maleRadio = document.getElementById('male');
+    var femaleRadio = document.getElementById('female');
+
+    var gender;
+    if (maleRadio.checked) {
+      gender = maleRadio.value;
+    } 
+    else if (femaleRadio.checked) {
+      gender = femaleRadio.value;
+    }
+    var height = parseFloat(document.getElementById('height').value);
+    var weight = parseFloat(document.getElementById('weight').value);
+    if (gender==null || isNaN(height) || isNaN(weight))
+    {  
+        document.getElementById('result1').innerHTML='성별, 키, 몸무게를 모두 알려주셔야 합니다!';
+        return;
+    }
+    var standard_offset;
+    if (gender=='female')
+      standard_offset=21;
+    else if (gender == 'male')
+      standard_offset=22;
+
+    var bmi = weight / (height * height) * 10000;
+    var standard = (height/100) * (height/100) * standard_offset;
+    document.getElementById('result1').innerHTML = '당신의 BMI 지수는 ' + bmi.toFixed(2) +'입니다.';
+    document.getElementById('result2').innerHTML = '당신의 표준체중은 ' + standard.toFixed(2)+'입니다.';
+    var difference = weight - standard;
+    if (difference >= 1)
+      document.getElementById('result3').innerHTML = difference.toFixed(0)+'kg을 감량하셔야겠군요..!'
+    else if (difference <= -1)
+    {
+      difference *= -1;
+      document.getElementById('result3').innerHTML = '표준 몸무게보다 '+difference.toFixed(0)+'kg 정도 낮습니다.'
+    }
+    else
+    document.getElementById('result3').innerHTML='표준 몸무게에 속합니다!';
+  }
+</script>
 </head>
 <body>
   <header>
@@ -19,7 +60,60 @@
   <section id="main_content">
     <span id="left"></span>
 
-    <section id="sidebar">
+    <section id="calculator">
+      <h2>신체 측정</h2>
+      <p>BMI는 '체질량 지수'로 키와 몸무게만으로 쉽게 측정할 수 있는 신체 지수입니다. <br>하지만 대략적 지표일 뿐 정확한 정확한 골격근량, 체지방량 등의 수치 계산은 <br><a id="location" href="https://naver.me/5izDaGGk" target="blank"><b style="text-decoration:underline;">학생회관 3층의 보건실</b></a>에 위치한 <b>인바디 기계</b>를 이용해주세요!</p>
+      <p>BMI 지수는 아래의 표를 참고해주세요!</p>
+      <table>
+        <tr id="headoftable">
+          <th>BMI</th>
+          <th>분류</th>
+        </tr>
+        <tr>
+          <td>~ 18.5</td>
+          <td>저체중 </td>
+        </tr>
+        <tr>
+          <td>18.5 ~ 22.9</td>
+          <td>정상체중</td>
+        </tr>
+        <tr>
+          <td>23 ~ 24.9</td>
+          <td>과체중 </td>
+        </tr>
+        <tr>
+          <td>25 ~ 29.9</td>
+          <td>비만 1단계</td>
+        </tr>
+        <tr>
+          <td>30 ~ 39.9</td>
+          <td>비만 2단계</td>
+        </tr>
+        <tr>
+          <td>40 ~</td>
+          <td>심각한 비만</td>
+        </tr>
+      </table>
+      <br>
+  <form>
+    <label for="gender"><b>성별</b> :</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <label for="height"><b>키 (cm)</b>:</label>
+    <input type="number" id="height" step="0.01"><br>
+    
+    <label for="weight"><b>몸무게 (kg)</b>:</label>
+    <input type="number" id="weight" step="0.01">
+    <button id="complete" type="button" onclick="calculateBMI()"><b>완료</b></button>
+    </form>
+    <br>
+  
+  <div id="result1"></div>
+  <div id="result2"></div><br>
+  <div id="result3"></div>
     </section>
   <span id="right"></span>
   </section>

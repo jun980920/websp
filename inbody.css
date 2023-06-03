@@ -23,9 +23,10 @@
       margin-right:6%;
     }
     
-    #sidebar{
+    #calculator{
       display:inline-block;
       width:700px;
+      text-align:center;
       vertical-align: top;
     }
     span{
@@ -58,4 +59,31 @@
 }
 #main_content{
   border-top:1px solid #363635;
+}
+#location:hover{
+  color:#777676;
+}
+
+label{
+  font-size:18px;
+}
+#height{
+  margin-right:16px;
+}
+
+#complete{
+  background-color: #777676;
+}
+form{
+  border-top:1px solid black;
+  text-align:center;
+  padding-top:20px;
+}
+table{
+  margin-left:38%;
+  border:1px solid black;
+}
+
+#result1, #result2, #result3{
+  font-size:30px;
 }
