@@ -22,7 +22,9 @@
     var weight = parseFloat(document.getElementById('weight').value);
     if (gender==null || isNaN(height) || isNaN(weight))
     {  
-        document.getElementById('result1').innerHTML='성별, 키, 몸무게를 모두 알려주셔야 합니다!';
+      document.getElementById('result1').innerHTML='성별, 키, 몸무게를 모두 알려주셔야 합니다!';
+      document.getElementById('result2').innerHTML='';
+      document.getElementById('result3').innerHTML='';
         return;
     }
     var standard_offset;
