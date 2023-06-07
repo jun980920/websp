@@ -27,6 +27,13 @@
       document.getElementById('result3').innerHTML='';
         return;
     }
+    else if (height <= 0 || weight<= 0)
+    {
+      document.getElementById('result1').innerHTML='키/몸무게 값은 0보다 커야합니다!';
+      document.getElementById('result2').innerHTML='';
+      document.getElementById('result3').innerHTML='';
+        return;
+    }
     var standard_offset;
     if (gender=='female')
       standard_offset=21;
